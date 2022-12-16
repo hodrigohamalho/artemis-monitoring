@@ -1,9 +1,9 @@
 - hosts: localhost
-  name: Install AMQ Broker (Artemis) with Monitoring enabled
+  name: Install AMQ Broker (Artemis) with Monitoring
   vars:
     server: https://api.cluster-578cf.578cf.sandbox1078.opentlc.com:6443
     artemis_cluster: my-source-cluster
-    namespace: amqstreams-pre
+    namespace: artemis-monitoring
     grafana_user: admin
     grafana_password: admin
     insecure_skip_tls_verify: true

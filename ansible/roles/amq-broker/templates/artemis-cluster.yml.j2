@@ -21,18 +21,20 @@ spec:
     expose: true
     sslEnabled: false
   deploymentPlan:
+    enableMetricsPlugin: true
+    jolokiaAgentEnabled: true
+    managementRBACEnabled: false
     clustered: true
     extraMounts: {}
     image: placeholder
     journalType: nio
     livenessProbe: {}
-    managementRBACEnabled: true
     messageMigration: true
     persistenceEnabled: true
     podSecurity: {}
     readinessProbe: {}
     requireLogin: true
-    size: 2
+    size: 1
     storage:
       size: 2Gi
   upgrades:

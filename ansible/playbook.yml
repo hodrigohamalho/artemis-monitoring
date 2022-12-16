@@ -19,7 +19,7 @@
       command: "oc login --token={{ token }}  --server={{ server }} --insecure-skip-tls-verify={{ insecure_skip_tls_verify }}"
       ignore_errors: false
 
-    - name: Evaluate Data Center A Namespace
+    - name: Create namespace
       k8s:
         state: present
         kind: Project

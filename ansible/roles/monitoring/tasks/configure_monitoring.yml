@@ -4,7 +4,7 @@
     namespace: '{{ namespace }}'
     resource_definition: "{{ lookup('template', 'artemis-service-monitor.yml.j2') }}"
 
-- name: Get Grafana ServiceAccount - DC A
+- name: Get Grafana ServiceAccount
   k8s_info:
     kind: ServiceAccount
     name:  grafana-serviceaccount
@@ -37,13 +37,13 @@
         name: grafana-serviceaccount
         namespace: '{{ namespace }}'
 
-- name: Evaluate Grafana Datasource - DC A
+- name: Evaluate Grafana Datasource
   k8s:
     namespace: '{{ namespace }}'
     state: present
     resource_definition: "{{ lookup('template', 'grafana-datasource.yml.j2') }}"
 
-- name: Evaluate Artemis Dashboard - DC A
+- name: Evaluate Artemis Dashboard
   k8s:
     state: present
     namespace: '{{ namespace }}'

@@ -1,11 +1,13 @@
 - name: Evaluate AMQ Broker Operator Group
   k8s:
     state: present
+    namespace: '{{ namespace }}'
     resource_definition: "{{ lookup('template', 'operator-group.yml.j2') }}"
 
 - name: Evaluate AMQ Broker Subscription
   k8s:
     state: present
+    namespace: '{{ namespace }}'
     resource_definition: "{{ lookup('template', 'amq-subscription.yml.j2') }}"
 
 - name: Wait for AMQ Broker Operator to be Running
@@ -23,13 +25,13 @@
   delay: 10
   until: r_amq_operator_pod.resources | list | length == 1
 
-- name: Evaluate AMQ Broker instance
+- name: Create AMQ Broker instance
   k8s:
     state: present
     namespace: '{{ namespace }}'
     resource_definition: "{{ lookup('template', 'artemis-cluster.yml.j2') }}"
 
-- name: Evaluate AMQ Broker Queue
+- name: Create AMQ Broker Queue
   k8s:
     state: present
     namespace: '{{ namespace }}'

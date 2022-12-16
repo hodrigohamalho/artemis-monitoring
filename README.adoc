@@ -11,7 +11,7 @@ ActiveMQ Artemis (AMQ Broker)
 
 == Install The Demo Using Ansible
 
-image::img/amq-broker-monitoring-sample.jpg[AMQ Broker Monitoring Sample]
+image::img/amq-broker-monitoring-sample.png[AMQ Broker Monitoring Sample]
 
 
 === Parameters

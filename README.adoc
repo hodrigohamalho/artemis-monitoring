@@ -1,4 +1,4 @@
-= Artemis with Monitoring enabled
+= Artemis Proof of Concept
 
 ActiveMQ Artemis (AMQ Broker)
 

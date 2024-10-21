@@ -3,7 +3,7 @@
   vars:
     server: https://api.cluster-578cf.578cf.sandbox1078.opentlc.com:6443
     artemis_cluster: my-source-cluster
-    namespace: artemis-monitoring
+    namespace: strimzi
     grafana_user: admin
     grafana_password: admin
     insecure_skip_tls_verify: true
